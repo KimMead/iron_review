@@ -1,4 +1,4 @@
-class Scraper
+class IronReview::Scraper
 
 BASE_URL = "https://www.beautybrands.com/hair-bath-skincare-makeup/reviews-tools-curling+irons.do"
 

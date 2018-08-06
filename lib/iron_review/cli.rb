@@ -1,4 +1,4 @@
-class CLI
+class IronReview::CLI
   def start
     puts "Welcome to your curling iron review!"
     puts ""

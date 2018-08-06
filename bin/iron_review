@@ -2,4 +2,4 @@
 
 require_relative '../lib/iron_review'
 
-CLI.new.start
+IronReview::CLI.new.start
