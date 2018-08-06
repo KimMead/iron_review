@@ -4,7 +4,7 @@ class IronReview::CLI
     puts ""
     puts "Here is the list of the reviewed curling irons."
 
-Scraper.scrape_irons
+IronReview::Scraper.scrape_irons
     #display list of curling irons
   end
 end

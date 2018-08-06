@@ -10,3 +10,4 @@ require 'pry'
 require_relative "./iron_review/version"
 require_relative "./iron_review/cli"
 require_relative "./iron_review/scraper"
+require_relative "./iron_review/iron"
