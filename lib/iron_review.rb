@@ -1,7 +1,11 @@
 #environment file
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
 
 require_relative "./iron_review/version"
 require_relative "./iron_review/cli"
+require_relative "./iron_review/scraper"
 
 module IronReview
   # Your code goes here...
