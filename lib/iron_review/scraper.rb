@@ -4,9 +4,11 @@ BASE_URL = "https://www.beautybrands.com/hair-bath-skincare-makeup/reviews-tools
 
   def self.scrape_irons
     doc = Nokogiri::HTML(open(BASE_URL))
-    doc.css('.detailImageWrapper').each do |iron_doc|
-      name = item
-    #binding.pry
+    doc.css(".grid").each do |iron_doc|
+      #binding.pry
+      #name = iron_doc.css(".grid a").attribute("title").text
+      #url = iron_doc.css(".grid a").attribute("href").text
+
     end
   end
 end
