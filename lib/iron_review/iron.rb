@@ -1,3 +1,15 @@
 class IronReview::Iron
-  attr_accessor :name, :rating, :url, :description
-end 
+  attr_accessor :name, :url, :rating, :description
+
+@@all = []
+
+  def initialize(name, url)
+    @name = name
+    @url = url
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+end
