@@ -9,12 +9,12 @@ BASE_URL = "https://www.beautybrands.com/hair-bath-skincare-makeup/reviews-tools
     url = iron_doc.css(".detailImageWrapper").attribute("href").value
     IronReview::Iron.new(name, url)
     end
-    binding.pry
-  end
+end 
 
   def self.scrape_details(iron)
     doc = Nokogiri::HTML(open(BASE_URL))
-    doc.css(".ml-product-desc-short").each do |details_doc|
+    doc.css(".productDesc").each do |details_doc|
+      binding.pry
   end
 end
 end
