@@ -13,7 +13,6 @@ class IronReview::CLI
     irons = IronReview::Iron.all
     irons.each.with_index(1).each do |iron, index|
     puts "#{index}. #{iron.name}"
-    #IronReview::Scraper.scrape_details
     end
     puts ""
     puts "Select an iron for the product description:"
@@ -28,5 +27,7 @@ class IronReview::CLI
     puts iron.description
     puts ""
     puts iron.benefit
-  end
+    puts ""
+end
+list_irons
 end
