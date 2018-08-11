@@ -1,5 +1,5 @@
 class IronReview::Iron
-  attr_accessor :name, :url, :rating, :description
+  attr_accessor :name, :url, :benefit, :description
 
 @@all = []
 

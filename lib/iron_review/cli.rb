@@ -18,10 +18,15 @@ class IronReview::CLI
     puts ""
     puts "Select an iron for the product description:"
     puts ""
-
     input = gets.strip
     index = input.to_i - 1
     iron = IronReview::Iron.all[index]
     IronReview::Scraper.scrape_details(iron)
+    puts ""
+    puts "Here are the product details:"
+    puts ""
+    puts iron.description
+    puts ""
+    puts iron.benefit
   end
 end
