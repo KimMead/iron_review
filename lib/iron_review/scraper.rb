@@ -13,10 +13,9 @@ end
 
   def self.scrape_details(iron)
     url = iron.url
-    doc = Nokogiri::HTML(open(BASE_URL))
-    binding.pry
-    iron.description = doc.css('.productDesc')
+    doc = Nokogiri::HTML(open(url))
+    iron.description = doc.css('.ml-product-desc-short').text
 
+    binding.pry
   end
-end
 end
