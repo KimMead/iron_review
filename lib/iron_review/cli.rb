@@ -1,5 +1,6 @@
 class IronReview::CLI
   def start
+    puts ""
     puts "Welcome to your curling iron list!"
     puts ""
 
@@ -19,10 +20,11 @@ class IronReview::CLI
 
   def select_irons
     puts ""
-    puts "Select an iron for the product description:"
+    puts "Select an iron for the product details or type 'exit':"
     puts ""
     input = gets.strip
     index = input.to_i - 1
+      if input != 'exit'
     iron = IronReview::Iron.all[index]
       if !iron.description || !iron.benefit
     IronReview::Scraper.scrape_details(iron)
@@ -30,11 +32,13 @@ class IronReview::CLI
     puts ""
     puts "Here are the product details:"
     puts ""
+    puts "PRODUCT DESCRIPTION:"
     puts iron.description
     puts ""
+    puts "PRODUCT BENEFIT:"
     puts iron.benefit
     puts ""
-    list_irons
     select_irons
+  end
   end
 end
