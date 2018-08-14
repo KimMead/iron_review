@@ -23,8 +23,8 @@ class IronReview::CLI
     puts "Select an iron for the product details or type 'exit':"
     puts ""
     input = gets.strip
+    if input != "exit"
     index = input.to_i - 1
-      if input != 'exit'
     iron = IronReview::Iron.all[index]
       if !iron.description || !iron.benefit
     IronReview::Scraper.scrape_details(iron)
@@ -38,6 +38,7 @@ class IronReview::CLI
     puts "PRODUCT BENEFIT:"
     puts iron.benefit
     puts ""
+    list_irons
     select_irons
   end
   end
