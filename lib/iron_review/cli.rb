@@ -24,6 +24,13 @@ class IronReview::CLI
     puts ""
     input = gets.strip
     if input != "exit"
+      # if the input the user put in is between 1 and 20 or how many objects we have
+        # we will display an error messae
+        # we will then list out all of the irons again
+      if !input.to_i.between?(1, IronReview::Iron.all.count)
+        puts "That is not a valid entry.  Please try again."
+        list_irons
+      end
     index = input.to_i - 1
     iron = IronReview::Iron.all[index]
       if !iron.description || !iron.benefit
